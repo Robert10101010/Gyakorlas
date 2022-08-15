@@ -9,7 +9,7 @@ for($i=0; $i<10; $i++) {
         if ($i % 2 == 0) {
      
         } else {
-        $sum += $tomb[$i];
+        $sum += $i;
         }
     }
     echo"<br>";
