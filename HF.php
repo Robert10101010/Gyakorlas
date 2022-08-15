@@ -6,7 +6,7 @@ for($i=0; $i<10; $i++) {
 }
 for($i=0; $i<10; $i++) {     
     echo $tomb[$i]. ' ' ;
-        if ($tomb[$i] % 2 == 0) {
+        if ($i % 2 == 0) {
      
         } else {
         $sum += $tomb[$i];
