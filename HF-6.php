@@ -17,7 +17,6 @@ for($i=0; $i<3; $i++) {
 }
 echo"Tomb1: <br>";
 for($i=0; $i<3; $i++) {
-    
     for($j=0; $j<3; $j++) {    
     echo $tomb1[$i][$j] . ' ';
     
@@ -29,7 +28,7 @@ echo"Tomb2: ";
 for($i=0; $i<3; $i++) {
     echo"<br>";
     for($j=0; $j<3; $j++) {    
-    echo $tomb1[$j][$i] . ' ';  
+    echo $tomb2[$i][$j]=$tomb1[$j][$i] . ' ';  
         
         }   
 }
