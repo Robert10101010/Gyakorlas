@@ -14,7 +14,7 @@ if(isset($_POST['reset'])) {
     $_SESSION['counter'] = 0;
 }
 $szam= $_POST['number'];
-$randomnumber= mt_rand(1,3);
+$randomnumber= mt_rand(1,10);
 
 if ($szam > $randomnumber) {
     echo "  A szam nagyobb probalkozz ujra";
