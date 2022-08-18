@@ -1,4 +1,4 @@
-<form action="" method="POST">
+<form action=":)" method="POST">
 Tipp:
 <input type="text" name="number" value=''/> <br><br>
 Eredmeny: 
@@ -24,7 +24,7 @@ elseif ($szam < $randomnumber) {
     echo " A szam kisebb probalkozz ujra";
     }
 else {
-    echo "$randomnumber. Eltalatad.";
+    echo "$randomnumber. Eltalatad :).";
     }
 }
 ?>
