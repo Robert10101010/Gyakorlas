@@ -15,7 +15,7 @@ if(isset($_POST['reset'])) {
 }
 $szam= $_POST['number'];
 $submitbutton= $_POST['button'];
-$randomnumber= mt_rand(1,1000);
+$randomnumber= mt_rand(1,3);
 if ($submitbutton){
 if ($szam > $randomnumber) {
     echo "  A szam nagyobb probalkozz ujra";
@@ -24,7 +24,8 @@ elseif ($szam < $randomnumber) {
     echo " A szam kisebb probalkozz ujra";
     }
 else {
-    echo "$randomnumber. Eltalatad.";
+    echo "$randomnumber. Eltalatad a szamot ";
+    echo $_SESSION['counter'] . " Probalkozasbol";
     }
 }
 ?>
