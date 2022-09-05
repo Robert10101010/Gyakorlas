@@ -1,5 +1,6 @@
 <html>
 <head>
+  
 </head>
 <body>
 <form action="teszt.php" method="POST">
@@ -17,7 +18,7 @@ if(isset($_POST['gomb'])) {
     $count=1;
     $col=0;
     $row=0;
-
+    $star="*";
     while ($count <= ($_POST['tomb']*$_POST['tomb'])) {
         for ($i=$col, $j=$row ; $i <$array_size ; $i++) { 
             $array_data[$j][$i]=$count;
@@ -46,7 +47,7 @@ if(isset($_POST['gomb'])) {
             $array_data[$j][$i]=$count;
             $count++;
         }
-
+       
     }
    
     showArray($array_data,$_POST['tomb']);
@@ -56,7 +57,7 @@ if(isset($_POST['gomb'])) {
 function showArray($array, $size){
         for ($i=0; $i <$size ; $i++) { 
          for ($j=0; $j <$size ; $j++) { 
-            if ($size%2==1  &&  $array[$i][$j]%2==0) {
+            if ($array[$i][$j]%2==0) {
                 echo $array[$i][$j].' ';
             } elseif ($size%2==0) {
                  echo $array[$i][$j].' ';
@@ -67,5 +68,6 @@ function showArray($array, $size){
          echo "<br>";
         }
 }
+
 
     ?>
