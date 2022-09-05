@@ -54,18 +54,18 @@ if(isset($_POST['gomb'])) {
 }
 
 function showArray($array, $size){
-    for ($i=0; $i <$size ; $i++) { 
-        for ($j=0; $j <$size ; $j++) { 
+        for ($i=0; $i <$size ; $i++) { 
+         for ($j=0; $j <$size ; $j++) { 
             if ($size%2==1  &&  $array[$i][$j]%2==0) {
                 echo $array[$i][$j].' ';
-            }  elseif ($size%2==0) {
-                echo $array[$i][$j].' ';
-                 }   else {
-                echo '-'. $array[$i][$j].' ';
-                  }
+            } elseif ($size%2==0) {
+                 echo $array[$i][$j].' ';
+            } else {
+                 echo '-'. $array[$i][$j].' ';
+            }
         }
          echo "<br>";
-    }
+        }
 }
 
     ?>
