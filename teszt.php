@@ -43,10 +43,13 @@ if(isset($_POST['gomb'])) {
         $i=$col;
         $j--;
         $col++;
+        $star="*";
         for (; $j >=$row ; $j--) { 
-            $array_data[$j][$i]=$count;
-            $count++;
+           $array_data[$j][$i]=$count;
+           $count++;
+        
         }
+       
        
     }
    
@@ -57,10 +60,8 @@ if(isset($_POST['gomb'])) {
 function showArray($array, $size){
         for ($i=0; $i <$size ; $i++) { 
          for ($j=0; $j <$size ; $j++) { 
-            if ($array[$i][$j]%2==0) {
+            if ($array[$i][$j]%2==0 || $size%2==0 ) {
                 echo $array[$i][$j].' ';
-            } elseif ($size%2==0) {
-                 echo $array[$i][$j].' ';
             } else {
                  echo '-'. $array[$i][$j].' ';
             }
