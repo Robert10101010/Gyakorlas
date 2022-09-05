@@ -20,14 +20,14 @@ if(isset($_POST['gomb'])) {
 
     while ($count <= ($_POST['tomb']*$_POST['tomb'])) {
         for ($i=$col, $j=$row ; $i <$array_size ; $i++) { 
-            $array_data[$i][$j]=$count;
+            $array_data[$j][$i]=$count;
             $count++; 
         }
         $row++;
         $j=$row;
         $i=$array_size-1;
         for (; $j < $array_size; $j++) { 
-            $array_data[$i][$j]=$count;
+            $array_data[$j][$i]=$count;
             $count++;
         }
 
@@ -35,7 +35,7 @@ if(isset($_POST['gomb'])) {
         $j=$array_size;
         $i--;
         for (; $i >=$col; $i--) { 
-            $array_data[$i][$j]=$count;
+            $array_data[$j][$i]=$count;
             $count++;
         }  
 
@@ -43,7 +43,7 @@ if(isset($_POST['gomb'])) {
         $j--;
         $col++;
         for (; $j >=$row ; $j--) { 
-            $array_data[$i][$j]=$count;
+            $array_data[$j][$i]=$count;
             $count++;
         }
 
