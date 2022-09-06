@@ -20,6 +20,7 @@ if(isset($_POST['gomb'])) {
     $row=0;
     $star="*";
     while ($count <= ($_POST['tomb']*$_POST['tomb'])) {
+        
         for ($i=$col, $j=$row ; $i <$array_size ; $i++) { 
             $array_data[$j][$i]=$count;
             $count++; 
@@ -45,15 +46,14 @@ if(isset($_POST['gomb'])) {
         $col++;
         for (; $j >=$row ; $j--) { 
             $array_data[$j][$i]=$count;
-            $count++;
-         
+            $count++; 
+           
         }
         
-       
     }
    
     showArray($array_data,$_POST['tomb']);
-   
+  
 }
 
 function showArray($array, $size){
@@ -61,16 +61,14 @@ function showArray($array, $size){
          for ($j=0; $j <$size ; $j++) { 
             if ($array[$i][$j]%2==0 || $size%2==0 ) {
                 echo $array[$i][$j].' ';
-            } else {
-                echo  $array[$i][$j]/(-1).' ';
-            }
-            
-
-        }
+            } elseif($size*$size==$array[$i][$j] && $size>1) {
+                echo "*".' ';
+              } else{
+                echo $array[$i][$j]/(-1).' ';
+                }
+        } 
          echo "<br>";
-        }
-       
+         }           
 }
-
 
     ?>
